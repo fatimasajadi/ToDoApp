@@ -1,0 +1,16 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-8">
+            <input type="text" class="form-control" [(ngModel)]="textInput" placeholder="What needs to be done?">
+        </div>
+        <div class="col-4">
+            <button class="btn btn-block btn-primary" (click)="itemCreator()">Add to list</button>
+        </div>
+    </div>
+
+    <div *ngFor="let item of todos" class="item clearfix">
+        {{item}}
+        <button id="del" class="btn btn-default btn-sm float-right" (click)="itemDelete(item)">del</button>
+    </div>
+</div>
